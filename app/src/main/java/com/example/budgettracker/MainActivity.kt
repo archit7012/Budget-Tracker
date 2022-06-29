@@ -1,5 +1,6 @@
 package com.example.budgettracker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -36,6 +37,12 @@ class MainActivity : AppCompatActivity() {
             layoutManager=linearlayoutManager
         }
         updatedashboard()
+
+        addbtn.setOnClickListener{
+            val intent=Intent(this, AddTransactionActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun updatedashboard(){
